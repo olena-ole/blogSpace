@@ -14,3 +14,17 @@ fetch('https://apis.scrimba.com/jsonplaceholder/posts')
         };
         document.getElementById('blog-list').innerHTML = html;
     });
+
+const form = document.querySelector('#post-form');
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    const postTitle = formData.get('title');
+    const postBody = formData.get('body');
+    const data = {
+        title: postTitle,
+        body: postBody
+    };
+    console.log(data);
+})

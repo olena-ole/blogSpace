@@ -8,6 +8,11 @@ body {
     font-family: 'Karla', sans-serif;
 }
 
+.container {
+    max-width: 460px;
+    margin: 0 auto;
+}
+
 nav {
     background: beige;
     position: fixed;
@@ -22,6 +27,35 @@ nav > h3 {
     margin: 0;
 }
 
-.blog-list {
+form {
     padding: 30px 10px 10px;
+    display: flex;
+    flex-direction: column;
+    background: lightblue;
+}
+
+form > label {
+    margin-top: 15px;
+}
+
+form > button {
+    margin-top: 10px;
+    width: 40%;
+    max-width: 150px;
+    padding: .5em;
+    border-radius: 7px;
+    border: none;
+    background: darkkhaki;
+    align-self: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+form > button:hover,
+form > button:focus {
+    background: yellow;
+}
+
+.blog-list {
+    padding: 10px;
 }
