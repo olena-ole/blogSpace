@@ -1,5 +1,6 @@
 'use strict';
 
+const form = document.querySelector('#post-form');
 let postsArr = [];
 
 function renderPosts() {
@@ -21,13 +22,12 @@ fetch('https://apis.scrimba.com/jsonplaceholder/posts')
         renderPosts();
     });
 
-const form = document.querySelector('#post-form');
-
 form.addEventListener('submit', e => {
     e.preventDefault();
     const formData = new FormData(form);
     const postTitle = formData.get('title');
     const postBody = formData.get('body');
+    form.reset();
     const data = {
         title: postTitle,
         body: postBody
